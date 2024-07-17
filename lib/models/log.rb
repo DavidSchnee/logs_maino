@@ -14,12 +14,16 @@ module Models
       end
     end
 
+    def updated_at=(date)
+      @updated_at = date || DateTime.now
+    end
+
     def data=(data)
       @data = jsonb(data)
     end
 
     def jsonb(json)
-      return if json.blank?
+      return if json.nil?
       return json if json.is_a?(String)
 
       Sequel&.pg_json(json)
