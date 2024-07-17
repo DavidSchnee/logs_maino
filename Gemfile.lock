@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    logs_maino (0.1.0)
+    logs_maino (0.1.1)
       sequel
 
 GEM
